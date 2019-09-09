@@ -24,7 +24,45 @@ public class LNodeTools<T> {
         }
         return head;
     }
-    public LNode<T> add(T... data){
-        return null;
+    public int getLNodeLength(LNode<T> head){
+        int i = 1;
+        while (head.next != null){
+            head = head.next;
+            i++;
+        }
+        return i;
     }
+
+    public LNode<T> getLinkListByIndex(LNode<T> head, int i){
+        if(i > this.getLNodeLength(head)){
+            System.out.println("索引超出了单链表的长度");
+            return null;
+        }
+        int j = 1;
+        LNode<T> p = head;
+        while (p.next != null && j < i){
+            p = p.next;
+            j++;
+        }
+        return p;
+    }
+
+    public LNode<T> getLinkListByValue(LNode<T> head, T data){
+        LNode<T> p = head;
+        while (p != null && p.data != data){
+            p = p.next;
+        }
+        return p;
+    }
+
+    public LNode<T> insert(LNode<T> head, int i, T data){
+        LNode<T> m = head;
+        LNode<T> p = this.getLinkListByIndex(m, i-1);
+        LNode<T> q = p.next;
+        LNode<T> toInsert = new LNode<>(data);
+        toInsert.next = q;
+        p.next = toInsert;
+        return m;
+    }
+
 }   

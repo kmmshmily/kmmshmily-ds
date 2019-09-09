@@ -17,7 +17,9 @@ public class LNodeTest {
         System.out.println(lnode);
         System.out.println("*******");
         LNodeTools<Integer> tools = new LNodeTools<>();
-        LNode<Integer> lNode = tools.init(1,2,3,4,5,6,7);
-        System.out.println(lNode);
+        LNode<Integer> lNode = tools.init(2,1,3,4,8);
+        System.out.println(tools.getLinkListByIndex(lNode, 5));
+        System.out.println(tools.getLinkListByValue(lNode, 5));
+        System.out.println(tools.insert(lNode, 3, 6));
     }
 }   
