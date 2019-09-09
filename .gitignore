@@ -4,7 +4,7 @@
 .classpath
 *.iml
 .project
-/target/
+target/
 .log
 /log
 *.log
