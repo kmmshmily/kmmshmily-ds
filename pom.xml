@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>ds-seqlist</module>
+    <module>ds-lnode</module>
   </modules>
 
   <name>dsstudy</name>
