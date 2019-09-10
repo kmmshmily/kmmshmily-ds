@@ -20,6 +20,6 @@ public class LNodeTest {
         LNode<Integer> lNode = tools.init(2,1,3,4,8);
         System.out.println(tools.getLinkListByIndex(lNode, 5));
         System.out.println(tools.getLinkListByValue(lNode, 5));
-        System.out.println(tools.insert(lNode, 3, 6));
+        System.out.println(tools.insert(lNode, 1, 6));
     }
 }   

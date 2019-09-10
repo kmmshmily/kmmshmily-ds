@@ -57,6 +57,11 @@ public class LNodeTools<T> {
 
     public LNode<T> insert(LNode<T> head, int i, T data){
         LNode<T> m = head;
+        if(i == 1){
+            LNode<T> toInsert = new LNode<>(data);
+            toInsert.next = m;
+            return toInsert;
+        }
         LNode<T> p = this.getLinkListByIndex(m, i-1);
         LNode<T> q = p.next;
         LNode<T> toInsert = new LNode<>(data);
